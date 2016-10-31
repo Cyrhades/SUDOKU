@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+	  	<meta charset="utf-8">
+		<title>Challenge résolution de Sudoku pour Yoomap par LECOMTE Cyril</title>
+		<link rel="stylesheet" href="assets/css/style.css">
+		<meta name="author" content="LECOMTE Cyril">
+	</head>
+	<body>
+		<div class="container">
+			<h1>Résolution de Sudoku</h1>
+			<div class="zone_boutons">
+				<select id="level">
+					<option value="35">Facile</option>
+					<option value="45">Intermédiaire</option>
+					<option value="55">Difficile</option>
+				</select>
+				<input type="button" id="generate" value="Générer une nouvelle grille" />
+				<input type="button" id="empty" value="Vider la grille" />
+			</div>
+
+			<div id="sudoku"></div>
+			<small>
+			* Vous êtes bloqué sur votre Sudoku ? <br />
+			Remplissez les cases connues et résolvez le en 1 clic !
+			</small>
+
+			<div class="zone_boutons">
+				<input type="button" id="resolve" value="Résoudre le sudoku" />
+			</div>
+		</div>
+		<script src="assets/js/jquery-3.1.1.slim.min.js"></script>
+		<script src="assets/js/kudoku.js"></script>
+		<script src="assets/js/sudoku.jq.js"></script>
+		<script>
+			$(document).ready(function() {
+				// Creer la grille de Sudoku Vide
+				$('#sudoku').createSudokuGrid({
+					size 			: 400,
+					withData 		: true,
+					nbCaseEmpty 	: $('#level').val()
+					//inputLevel  : 		'#level',
+					//btnResolve 		: "#resolve",
+					//btnCreateGrid 	: "#generate",
+					//btnEmptyGrid 	: "#empty"
+				});
+			});
+		</script>
+	</body>
+</html>

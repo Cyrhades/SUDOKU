@@ -1,0 +1,19 @@
+/*** Chargement de 2 fonts Google ***/
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Pacifico');
+
+/*** Retirer background de la selection ***/
+::selection {background-color: transparent;}::-moz-selection {background-color: transparent;}::-o-selection {background-color: transparent;}::-ms-selection {background-color: transparent;}::-webkit-selection {background-color: transparent;}
+
+/*** Apparence du Sudoku ***/
+body {background:#ddd; text-align:center; }
+h1 {font-family: 'Bungee Inline'; }
+small {font-family: 'Pacifico'; font-size : 0.9em;}
+#sudoku {margin:auto;}
+.zone_boutons {margin: 30px auto;}
+#sudoku div.grid  div.block {outline : 5px solid #000;}
+#sudoku div.case input {border: 1px solid #000;	font-size :1.8em;}
+#sudoku div.case input:focus {z-index : 1000;font-size : 2em;}
+.case_strict { color : #eee; background-color:#888;/* color : #b26a0c; background-color:#ddd;*/}
+.case_user { color : #191918; }
+.case_solution { color : #db3c02; }
+[class*="error_"] {	background:#e09393;}
