@@ -143,7 +143,7 @@ var resolveSudoku = function() {
 	var sBase = implodeSudokuString();
 	
 	if (sBase.length >= 81) {
-		var solver = sudoku_solver()
+		var solver = sudoku_solver();
 		var aResult = solver(sBase,1); // On ne prend qu'un seul resultat
 		if (typeof aResult[0] != 'undefined') {
 			// On complete la grille
